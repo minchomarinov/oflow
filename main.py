@@ -129,7 +129,7 @@ if __name__ == '__main__':
 
     cv2.imshow('imag1', show1)
     cv2.imshow('image2', show3)
-
+    cv2.imwrite("fid02.jpg",show3)
     cv2.waitKey(0)  # wait for a keyboard input
     cv2.destroyAllWindows()
 
