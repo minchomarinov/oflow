@@ -124,12 +124,19 @@ if __name__ == '__main__':
     print(p3)
     print(st)
     print(err)
-    #show2 =cv2.drawMarker(grayimgCrop2, [30,30] , color=(0, 255, 0), markerType=cv2.MARKER_CROSS, thickness=1)
-    show3 =cv2.drawMarker(img2C, p3[0].astype(int) , color=(0, 255, 0), markerType=cv2.MARKER_CROSS, thickness=1)
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    org = (25, 50)
+    fontScale = .25
+    color = (0, 0, 0)
+    thickness = 1
 
+
+    #show2 =cv2.drawMarker(grayimgCrop2, [30,30] , color=(0, 255, 0), markerType=cv2.MARKER_CROSS, thickness=1)
+    show1 =cv2.drawMarker(img2C,(50,50) , color=(0, 255, 0), markerType=cv2.MARKER_CROSS, thickness=1)
+    show2 =cv2.putText(show1, "Hello", org, font, fontScale, color, thickness, cv2.LINE_AA )
     cv2.imshow('imag1', show1)
-    cv2.imshow('image2', show3)
-    cv2.imwrite("fid02.jpg",show3)
+    #cv2.imshow('image2', show3)
+    #cv2.imwrite("fid02.jpg",show3)
     cv2.waitKey(0)  # wait for a keyboard input
     cv2.destroyAllWindows()
 
